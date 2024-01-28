@@ -1,6 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Employee Polls Project
+Overview
+Develop an internal application for employees to create and participate in polls, promoting collaboration and transparency. A leaderboard showcases top-performing employees, and HR rewards quarterly.
+
+### Why this project?
+Strengthen React and Redux skills, improve state predictability, and practice writing unit tests.
+
+
+Starter code includes _DATA.js with fake database methods. Edit avatarURL for each user.
+
+### App Features
+User Authentication:
+
+Impersonate/login as an existing user.
+Display home page after login.
+Unauthorized attempts prompt sign-in.
+
+Home Page:
+Toggle between answered/unanswered polls.
+Clicking on a poll takes user to poll details.
+
+### Poll Details:
+Displays "Would You Rather," user avatar, and two options.
+For answered polls, shows option text, votes, and percentage.
+Clearly marks user's selected option.
+404 page for non-existing polls.
+Poll Voting:
+
+
+Posting Polls:
+Submitting creates a new poll, redirects to home page.
+
+Leaderboard:
+Entries include user's name, picture, questions asked, and questions answered.
+Users ordered by questions asked and answered.
+
+Navigation:
+Navigate within the app using Navbar.
+Access to pages requires signing in.
+
 
 ## Available Scripts
 
@@ -11,60 +49,21 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Login as a user
+Once the app is running, you can login using one of the following credentials: 
 
-### `npm test`
+### User one
+UserID: sarahedo
+Password: 'password123'
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User two
+UserID: tylermcginnis
+Password: 'passsomthing'
 
-### `npm run build`
+### User three
+UserID: mtsamis
+Password: '3243223'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### User four
+UserID: zoshikanlu
+Password: 'pass246'

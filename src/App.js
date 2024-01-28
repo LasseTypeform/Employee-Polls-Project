@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import React, { useEffect, Fragment } from 'react';
 import './App.css';
+import LoadingBar, { showLoading, hideLoading } from "react-redux-loading-bar";
+import { Routes, Route } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+
+import Nav from './features/components/Nav'
+import Leaderboard from './features/components/Leaderboard';
+import New from './features/components/New';
+import Home from './features/components/Home';
+import LoginPage from './features/components/LoginPage';
+import Question from './features/components/Question'
+
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      
+      <div className="App-header">
+      <LoadingBar style={{ backgroundColor: 'red', height: '2px' }}/>
+      <Nav />
+      </div>
+      <div className='main'>
+      <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/login" exact element={<LoginPage />} />
+          <Route path="/leaderboard" exact element={<Leaderboard />} />
+          <Route path="/new" exact element={<New />} />
+          <Route path="/question/:id" element={<Question />} />
+        </Routes>
+      </div>
+      
+
+    </Fragment>
   );
 }
 
