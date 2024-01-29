@@ -1,19 +1,24 @@
 body {
   max-width: 100vw;
   padding: 10px;
+  background-color:rgb(136, 214, 171);
+  color: white;
 }
 
 .App {
   text-align: center;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .App-header {
   background-color: #282c34;
   /* background-color: white; */
   height: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -37,28 +42,26 @@ body {
 /* Main wrapper */
 
 .main {
-  display: inline-flex;
   min-width: 100%;
   max-width: 100vw;
   justify-content: center;
+  display: inline-flex;
 }
 
 /* Nav bar */
 
 .nav-wrapper {
-  display: inline-flex;
   min-width: 100%;
   max-width: 100vw;
+  display: inline-flex;
   justify-content: space-between;
-
 }
 
 .nav {
-  display: inline-flex;
   min-width: 100%;
   max-width: 100vw;
+  display: inline-flex;
   justify-content: space-between;
-
 }
 
 .nav-links ul {
@@ -97,22 +100,6 @@ button {
 
 .home-page {}
 
-/* authed user container */
-
-.authed-user-container,
-.authed-user-container ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-}
-
-.userChosen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Polls */
 
 .polls-container-wrapper {
@@ -121,28 +108,14 @@ button {
   padding: 25px;
 }
 
-.polls-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-width: 80vw;
-
-
+.pollbox {
+ text-align: center;
 }
 
 .polls-block-title {
   display: flex;
   justify-content: center;
 }
-
-/* .poll-block-container {
-  border-style: solid;
-  border: 2px;
-  background-color: cadetblue;
-} */
-
-
-
 
 .optionBlock {
   display: flex;
@@ -159,10 +132,8 @@ button {
 }
 
 .poll-block-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   border: 2px solid;
+  padding: 10px;
 }
 
 .see-poll-button,
@@ -173,6 +144,12 @@ link {
   border-color: rgb(36, 132, 55);
 }
 
+.see-poll-button {
+  text-align: center;
+  border: 1px solid white;
+  width: 80%;
+}
+
 .unansweredPolls,
 .answeredPolls {
   display: flex;
@@ -181,26 +158,46 @@ link {
 }
 
 /* New Page */
-.question-page, .question-container {
+.question-page,
+.question-container {
   width: 80vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid black;
+  border: 1px solid;
 }
 
-.question-page, h4{
+.question-page,
+h4 {
   width: 80vw;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid;
 }
 
-.question-page, .options-to-choose-from {
+.question-page,
+.options-to-choose-from {
   width: 80vw;
 }
+
 .options-to-choose-from {
   justify-content: space-evenly;
   display: inline-flex;
   padding: 30px;
 }
 
+td, th, table {
+  border:1px solid;
+  text-align: center;
+}
+
+/* td, th {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+} */
+
+.custom_something {
+  top: 20%;
+  left: 1%;
+  position: absolute; 
+  top: 20%
+}

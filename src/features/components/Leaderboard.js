@@ -47,9 +47,11 @@ function Leaderboard() {
             <table>
               <thead>
                 <tr>
-                  <th>Users 1 </th>
+                  <th></th>
+                  <th>Users </th>
                   <th>Questions Asked </th>
                   <th>Questions Answered</th>
+                  <th>Score</th>
                 </tr>
               </thead>
               <tbody>
@@ -63,13 +65,13 @@ function Leaderboard() {
                         <p>{user.name}</p>
                       </td>
                       <td>
-                        <p>Asked: {user.questions.length}</p>
+                        <p> {user.questions.length}</p>
                       </td>
                       <td>
-                        <p>Answered: {Object.keys(user.answers).length}</p>
+                        <p> {Object.keys(user.answers).length}</p>
                       </td>
                       <td>
-                        <p>Score: {user.score}</p>
+                        <p> {user.score}</p>
                       </td>
                     </tr>
                   ))}

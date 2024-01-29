@@ -7,10 +7,10 @@ function Polls(props) {
     const { questions, title } = props
 
     return (
-        <div className='polls-container-wrapper'>
+        <div className='polls-container-wrapper flex-column'>
             {
                 (questions.length > 0 && title !== undefined) && (
-                    <div className='polls-container'>
+                    <div className='polls-container flex-column'>
                         <div className='polls-block-title'>
                             <h4>{title}</h4>
                             </div>

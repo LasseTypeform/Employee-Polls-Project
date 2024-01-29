@@ -149,11 +149,11 @@ function Question() {
 
 
     return (
-        <div className='question-page'>
+        <div className='question-page flex-column'>
             <h3>Poll page</h3>
             {(isAuthed && Object.keys(questionChosen).length > 0) ?
                 (
-                    <div className='question-container'>
+                    <div className='question-container flex-column'>
 
                         <h4>Would You Rather</h4>
                         <div>Question: {JSON.stringify(params)}</div>

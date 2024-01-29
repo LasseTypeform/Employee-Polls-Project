@@ -7,7 +7,7 @@ import { getInitialQuestions, getUsers } from '../../utils/api'
 import { AllQuestions } from '../slices/questionsSlice'
 import { AllUser } from '../slices/usersSlice'
 
-import LoadingBar from "react-redux-loading-bar";
+import LoadingBar, { showLoading, hideLoading } from "react-redux-loading-bar";
 
 function Home() {
 
@@ -25,9 +25,11 @@ function Home() {
         
         let tempTrue = []
         let tempFalse = []
-
+      
+        // do long running stuff
+       
         if ((dataArray).length > 0 && Object.values(signedInUser['answers']).length > 0) {
-
+           
             let usersQs = Object.keys(signedInUser['answers'])
 
             dataArray.forEach((q) => {
@@ -37,6 +39,7 @@ function Home() {
                 }
             })
             setCheckedQuestions(tempTrue, tempFalse)
+            
         }
     }
 
@@ -59,7 +62,8 @@ function Home() {
     useEffect(() => {
 
         let questionsRetrieved = false
-
+        dispatch(showLoading())
+        
         if (isAuthed) {
             
             if (!questionsRetrieved) {
@@ -86,19 +90,24 @@ function Home() {
                 } else if (questionsFromState !== undefined){
                     compareQuestions(questionsFromState)
                 }
+                
                 return () => {
+                    dispatch(hideLoading())
                     questionsRetrieved = true
                 }
             }
+            
         }
 
     }, [count])
 
 
     return (
-        <div className='home-page'>
-            <LoadingBar style={{ backgroundColor: 'blue', height: '10px' }} />
+        <div className='home-page flex-column'>
+            <LoadingBar className="custom_something" style={{ backgroundColor: 'red', height: '2px'}}/>
             <h3>React Redux Employee Polls Project</h3>
+            
+            
 
             {isAuthed ? (
                 <LoggedInUser />

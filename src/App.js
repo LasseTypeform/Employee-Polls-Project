@@ -1,8 +1,7 @@
-import React, { useEffect, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 import LoadingBar, { showLoading, hideLoading } from "react-redux-loading-bar";
 import { Routes, Route } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
 
 import Nav from './features/components/Nav'
 import Leaderboard from './features/components/Leaderboard';
@@ -19,8 +18,8 @@ function App() {
   return (
     <Fragment>
       
-      <div className="App-header">
-      <LoadingBar style={{ backgroundColor: 'red', height: '2px' }}/>
+      <div className="App-header flex-column" >
+      <LoadingBar className="custom_something" style={{ backgroundColor: 'red', height: '2px' }}/>
       <Nav />
       </div>
       <div className='main'>

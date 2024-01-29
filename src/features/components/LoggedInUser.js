@@ -8,11 +8,11 @@ const LoggedInUser = () => {
     <div className='loggedin-user-container'>
 
     
-      <div className='userChosen'>
+      <div className='userChosen flex-column'>
       {
-        (Object.values(userChosen).length > 0 && userChosen !== undefined) && ( <div>
-          <div >
-            <img alt="User Avatar" src={userChosen['avatarURL']}/>
+        (Object.values(userChosen).length > 0 && userChosen !== undefined) && ( <div className='flex-column'>
+          <div className='flex-column'>
+            <img alt="User Avatar" className="avatar" src={userChosen['avatarURL']}/>
           </div>
           <div>
             <p>Name: {userChosen['name']}</p>
